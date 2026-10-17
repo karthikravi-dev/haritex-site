@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,7 +38,7 @@
       <a href="#certifications">Certifications</a>
       <a href="#fabrics">Fabrics</a>
       <a href="#contact">Contact</a>
-      <a href="#quote" class="btn btn-madder nav-cta">Request a quote</a>
+      <a href="https://wa.me/919362244660?text=Hello%20Hari%20Tex%2C%20I%27d%20like%20a%20quote.%0A%0ACompany%20/%20country%3A%20%0AFabric%20type%3A%20%0ACertification%20%28GOTS%20/%20GRS%20/%20OCS%20/%20BCI%20/%20none%29%3A%20%0AQuantity%3A%20%0ATarget%20GSM%20/%20width%3A%20%0AIncoterm%20%28FOB%20/%20door%20delivery%29%3A%20%0ATarget%20delivery%20date%3A%20%0AOther%20details%3A%20" target="_blank" rel="noopener" class="btn btn-madder nav-cta">Request a quote</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
       <span class="menu-lines" aria-hidden="true"></span><span class="sr">Menu</span>
@@ -57,7 +57,7 @@
       <p class="hero-sub">From Salem’s textile heartland to garment makers across the globe — custom-engineered woven fabrics, GOTS, GRS &amp; OCS certified, built to scale with your order.</p>
       <p class="signature">Threaded with perfection. Woven with passion.</p>
       <div class="hero-cta">
-        <a href="#quote" class="btn btn-madder">Request a quote</a>
+        <a href="https://wa.me/919362244660?text=Hello%20Hari%20Tex%2C%20I%27d%20like%20a%20quote.%0A%0ACompany%20/%20country%3A%20%0AFabric%20type%3A%20%0ACertification%20%28GOTS%20/%20GRS%20/%20OCS%20/%20BCI%20/%20none%29%3A%20%0AQuantity%3A%20%0ATarget%20GSM%20/%20width%3A%20%0AIncoterm%20%28FOB%20/%20door%20delivery%29%3A%20%0ATarget%20delivery%20date%3A%20%0AOther%20details%3A%20" target="_blank" rel="noopener" class="btn btn-madder">Request a quote</a>
         <a href="#fabrics" class="btn btn-line">View our fabrics</a>
       </div>
       <dl class="hero-facts">
@@ -267,7 +267,7 @@
       <li class="swatch"><span class="hang"><span class="cloth sw-denimcheck"></span></span><span class="sw-name">Denim checks</span></li>
       <li class="swatch"><span class="hang"><span class="cloth sw-stripe"></span></span><span class="sw-name">Stripes</span></li>
       <li class="swatch swatch-custom">
-        <a href="#quote" class="hang"><span class="cloth sw-custom"><span>Your spec,<br>woven to order</span></span></a>
+        <a href="https://wa.me/919362244660?text=Hello%20Hari%20Tex%2C%20I%27d%20like%20a%20quote.%0A%0ACompany%20/%20country%3A%20%0AFabric%20type%3A%20%0ACertification%20%28GOTS%20/%20GRS%20/%20OCS%20/%20BCI%20/%20none%29%3A%20%0AQuantity%3A%20%0ATarget%20GSM%20/%20width%3A%20%0AIncoterm%20%28FOB%20/%20door%20delivery%29%3A%20%0ATarget%20delivery%20date%3A%20%0AOther%20details%3A%20" target="_blank" rel="noopener" class="hang" aria-label="Request a custom development on WhatsApp"><span class="cloth sw-custom"><span>Your spec,<br>woven to order</span></span></a>
         <span class="sw-name">Custom development</span>
       </li>
     </ul>
@@ -301,65 +301,27 @@
     <div class="quote-intro">
       <h2>Request a quote</h2>
       <p>Lead times and pricing vary by fabric type and weave complexity. Tell us what you need, and we’ll get back to you within 24–48 hours with a tailored quote.</p>
-      <ol class="quote-how">
-        <li>Fill in what you know — only the marked fields are required.</li>
-        <li>Choose email or WhatsApp. Your enquiry opens ready to send.</li>
-        <li>Attach spec sheets or photos in that email or chat.</li>
-      </ol>
-    </div>
-
-    <form class="quote-form" id="quoteForm" novalidate>
-      <fieldset>
-        <legend>About you</legend>
-        <div class="field"><label for="q-company">Company name <b aria-hidden="true">*</b></label><input id="q-company" name="Company name" autocomplete="organization" required></div>
-        <div class="field"><label for="q-person">Contact person <b aria-hidden="true">*</b></label><input id="q-person" name="Contact person" autocomplete="name" required></div>
-        <div class="field"><label for="q-email">Business email <b aria-hidden="true">*</b></label><input id="q-email" name="Business email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="q-phone">Phone / WhatsApp</label><input id="q-phone" name="Phone / WhatsApp" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="q-country">Country</label><input id="q-country" name="Country" autocomplete="country-name"></div>
-      </fieldset>
-
-      <fieldset>
-        <legend>About the fabric</legend>
-        <div class="field">
-          <label for="q-fabric">Fabric type <b aria-hidden="true">*</b></label>
-          <select id="q-fabric" name="Fabric type" required>
-            <option value="">Select a fabric</option>
-            <option>Polyester &amp; blends</option><option>Cotton &amp; blends</option><option>Viscose &amp; blends</option><option>Linen &amp; blends</option>
-            <option>Spandex</option><option>Fancy yarns</option><option>Melanges</option><option>Grindles</option><option>Double gauze</option>
-            <option>Flannels</option><option>Voiles</option><option>Slubs</option><option>Patchwork fabrics</option><option>Indigo fabrics</option>
-            <option>Chambray</option><option>Denim checks</option><option>Stripes</option><option>Custom development</option>
-          </select>
-        </div>
-        <div class="field field-wide">
-          <span class="label" id="q-cert-label">Certification requirement</span>
-          <div class="checks" role="group" aria-labelledby="q-cert-label">
-            <label class="check"><input type="checkbox" name="Certification" value="GOTS"><span>GOTS</span></label>
-            <label class="check"><input type="checkbox" name="Certification" value="GRS"><span>GRS</span></label>
-            <label class="check"><input type="checkbox" name="Certification" value="OCS"><span>OCS</span></label>
-            <label class="check"><input type="checkbox" name="Certification" value="BCI"><span>BCI</span></label>
-            <label class="check"><input type="checkbox" name="Certification" value="None"><span>None</span></label>
-          </div>
-        </div>
-        <div class="field"><label for="q-qty">Required quantity <b aria-hidden="true">*</b></label><input id="q-qty" name="Required quantity" placeholder="e.g. 5,000 metres" required></div>
-        <div class="field"><label for="q-gsm">Target GSM / width</label><input id="q-gsm" name="Target GSM / width" placeholder="e.g. 140 GSM, 58 inch"></div>
-        <div class="field">
-          <label for="q-incoterm">Preferred incoterm</label>
-          <select id="q-incoterm" name="Preferred incoterm">
-            <option value="">Select</option>
-            <option>FOB</option><option>Door delivery (DL)</option><option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="field"><label for="q-date">Target delivery date</label><input id="q-date" name="Target delivery date" type="date"></div>
-        <div class="field field-wide"><label for="q-details">Additional details</label><textarea id="q-details" name="Additional details" rows="4" placeholder="Construction, count, colours, finish, end use…"></textarea></div>
-      </fieldset>
-
-      <p class="form-error" id="formError" role="alert" hidden></p>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-madder" data-via="email">Send by email</button>
-        <button type="submit" class="btn btn-whatsapp" data-via="whatsapp">Send on WhatsApp</button>
+      <div class="quote-actions">
+        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/919362244660?text=Hello%20Hari%20Tex%2C%20I%27d%20like%20a%20quote.%0A%0ACompany%20/%20country%3A%20%0AFabric%20type%3A%20%0ACertification%20%28GOTS%20/%20GRS%20/%20OCS%20/%20BCI%20/%20none%29%3A%20%0AQuantity%3A%20%0ATarget%20GSM%20/%20width%3A%20%0AIncoterm%20%28FOB%20/%20door%20delivery%29%3A%20%0ATarget%20delivery%20date%3A%20%0AOther%20details%3A%20" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.342 22.616c-.39 1.1-2.282 2.104-3.156 2.168-.874.064-1.688.396-5.69-1.184-4.816-1.902-7.874-6.86-8.112-7.18-.236-.318-1.938-2.576-1.938-4.916 0-2.338 1.228-3.49 1.664-3.968.436-.478.952-.598 1.27-.598.316 0 .634.002.91.016.294.016.686-.112 1.074.818.39.936 1.326 3.236 1.444 3.472.116.236.194.512.04.828-.158.318-.236.514-.472.794-.236.278-.498.622-.71.834-.236.236-.482.492-.208.966.276.472 1.226 2.022 2.632 3.274 1.81 1.612 3.336 2.112 3.81 2.35.476.236.754.198 1.03-.12.276-.316 1.186-1.384 1.502-1.862.316-.478.634-.396 1.07-.236.436.158 2.77 1.306 3.246 1.544.476.236.794.356.91.554.118.198.118 1.148-.272 2.246z"/></svg>
+          Request a quote on WhatsApp
+        </a>
+        <p class="quote-alt">Prefer email? Write to <a href="mailto:haritexwoven@gmail.com?cc=hariprasad@haritex.net&amp;subject=Quote%20request">haritexwoven@gmail.com</a></p>
       </div>
-      <p class="form-done" id="formDone" role="status" hidden>Your enquiry is ready in your email or WhatsApp. Press send there to reach us.</p>
-    </form>
+    </div>
+    <div class="quote-card">
+      <h3>What to include</h3>
+      <p>WhatsApp opens with these lines ready to fill in. Share what you know — spec sheets and fabric photos help too.</p>
+      <ul class="quote-list">
+        <li>Fabric type</li>
+        <li>Certification needed — GOTS, GRS, OCS, BCI or none</li>
+        <li>Required quantity</li>
+        <li>Target GSM and width</li>
+        <li>Preferred incoterm — FOB or door delivery</li>
+        <li>Target delivery date</li>
+        <li>Your company name and country</li>
+      </ul>
+    </div>
   </div>
 </section>
 

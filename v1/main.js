@@ -1,4 +1,4 @@
-/* Hari Tex v1 — loom, navigation and quote form. No dependencies. */
+/* Hari Tex v1 — loom and navigation. No dependencies. */
 (function () {
   'use strict';
 
@@ -339,79 +339,4 @@
     });
   }
 
-  /* ------------------------------------------------------------
-     QUOTE FORM — composes an email or WhatsApp message
-     (works on static hosting, no server needed)
-  ------------------------------------------------------------ */
-  var form = document.getElementById('quoteForm');
-  if (!form) return;
-  var errBox = document.getElementById('formError');
-  var doneBox = document.getElementById('formDone');
-  var lastVia = 'email';
-  form.querySelectorAll('button[type="submit"]').forEach(function (b) {
-    b.addEventListener('click', function () { lastVia = b.dataset.via; });
-  });
-
-  var LABELS = {
-    'q-company': 'company name', 'q-person': 'contact person', 'q-email': 'business email',
-    'q-fabric': 'fabric type', 'q-qty': 'required quantity'
-  };
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var via = (e.submitter && e.submitter.dataset.via) || lastVia;
-    var missing = [], firstBad = null;
-
-    form.querySelectorAll('[required]').forEach(function (el) {
-      var bad = !el.value.trim() || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
-      el.setAttribute('aria-invalid', bad ? 'true' : 'false');
-      if (bad) { missing.push(LABELS[el.id] || el.name); if (!firstBad) firstBad = el; }
-    });
-
-    if (missing.length) {
-      var list = missing.length > 1 ? missing.slice(0, -1).join(', ') + ' and ' + missing[missing.length - 1] : missing[0];
-      errBox.textContent = 'Add your ' + list + ' so we can prepare a quote.';
-      errBox.hidden = false;
-      doneBox.hidden = true;
-      firstBad.focus();
-      return;
-    }
-    errBox.hidden = true;
-
-    var lines = [];
-    var certs = [];
-    Array.prototype.forEach.call(form.elements, function (el) {
-      if (!el.name || el.type === 'submit') return;
-      if (el.type === 'checkbox') { if (el.checked) certs.push(el.value); return; }
-      var v = el.value.trim();
-      if (!v) return;
-      lines.push(el.name + ': ' + v);
-    });
-    if (certs.length) {
-      var idx = lines.findIndex(function (l) { return l.indexOf('Fabric type:') === 0; });
-      lines.splice(idx + 1, 0, 'Certification requirement: ' + certs.join(', '));
-    }
-
-    var company = document.getElementById('q-company').value.trim();
-    var fabric = document.getElementById('q-fabric').value.trim();
-    var intro = 'Hello Hari Tex,\n\nI would like a quote for the following:\n\n';
-    var outro = '\n\n(Spec sheets / photos attached if available.)';
-    var body = intro + lines.join('\n') + outro;
-
-    if (via === 'whatsapp') {
-      window.open('https://wa.me/919362244660?text=' + encodeURIComponent(body), '_blank', 'noopener');
-    } else {
-      var subject = 'Quote request: ' + fabric + ' – ' + company;
-      window.location.href = 'mailto:haritexwoven@gmail.com?cc=hariprasad@haritex.net&subject=' +
-        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    }
-    doneBox.textContent = via === 'whatsapp'
-      ? 'Your enquiry is ready in WhatsApp. Press send there to reach us.'
-      : 'Your enquiry is ready in your email app. Attach any spec sheets and press send.';
-    doneBox.hidden = false;
-  });
-
-  form.addEventListener('input', function (e) {
-    if (e.target.getAttribute('aria-invalid') === 'true' && e.target.value.trim()) e.target.setAttribute('aria-invalid', 'false');
-  });
 })();
